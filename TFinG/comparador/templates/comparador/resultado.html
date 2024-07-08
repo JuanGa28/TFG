@@ -1,0 +1,24 @@
+<!-- mi_aplicacion/templates/mi_aplicacion/resultados.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Resultados</title>
+</head>
+<body>
+    <h1>Resultados de la Aplicación</h1>
+    <p>Serie de Precios:</p>
+    <ul>
+        {% for nombre, precio in seriesPrecios.items %}
+            <li>{{ nombre }}: {{ precio }}</li>
+        {% endfor %}
+    </ul>
+    <p>Precio Más Barato: {{ precioMasBarato }}</p>
+
+    <form action="{% url 'empezar' %}" method="post">
+        {% csrf_token %}
+        <button type="submit">Empezar</button>
+    </form>
+</body>
+</html>

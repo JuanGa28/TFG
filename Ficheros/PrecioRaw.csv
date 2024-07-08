@@ -1,0 +1,17 @@
+# CARA INFERIOR: ROJO
+    #glColor3f(204/255, 0/255, 0/255)
+    glBegin(GL_POLYGON)
+    glVertex3f(x+l, y-l, z-l) #1 #1 TRASERA
+    glVertex3f(x+l, y-l, z+l) #2 #1 FRONTAL
+    glVertex3f(x-l, y-l, z+l) #3 #4 FRONTAL
+    glVertex3f(x-l, y-l, z-l) #4 #4 TRASERA
+    glEnd()
+
+    # CARA SUPERIOR: AZUL
+    #glColor3f(153/255, 204/255, 255/255)
+    glBegin(GL_POLYGON)
+    glVertex3f(x+l+l, y+l, z-l) #1 #2 TRASERA
+    glVertex3f(x+l, y+l, z+l) #2 #2 FRONTAL
+    glVertex3f(x, y+l, z+l) #3 #3 FRONTAL
+    glVertex3f(x, y+l, z-l) #4 #3 TRASERA
+    glEnd()  
